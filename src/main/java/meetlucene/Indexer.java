@@ -18,22 +18,25 @@ public class Indexer {
 
 	public static void main(String[] args) throws Exception{
 		if (args.length != 2){
-			throw new IllegalArgumentException("Usage: java "
-					+ Indexer.class.getName() + " <index dir> <data dir>");
+			throw new IllegalArgumentException("Usage: java " + Indexer.class.getName() 
+					+ " <index dir> <data dir>");
 		}
 		String indexDir = args[0];
 		String dataDir = args[1];
 		long start = System.currentTimeMillis();
 		Indexer indexer = new Indexer(indexDir);
-		
 	}
 	
 	private IndexWriter writer;
 	
 	public Indexer(String indexDir) throws IOException{
 		Directory dir = FSDirectory.open(new File(indexDir));
-		writer = new IndexWriter(dir, new StandardAnalyzer(Version.LUCENE_30), true, IndexWriter.MaxFieldLength.UNLIMITED);
-		
+		writer = new IndexWriter(dir, new StandardAnalyzer(Version.LUCENE_30), true, 
+				IndexWriter.MaxFieldLength.UNLIMITED);
+	}
+	
+	public void close() throws IOException{
+		writer.close();
 	}
 
 }
