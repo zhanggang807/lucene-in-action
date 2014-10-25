@@ -14,7 +14,7 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
 /**
- * chapter 1.4
+ * Chapter 1.4 Indexer which indexs .txt files
  * @author Zhang Gang
  * @date 2014年10月23日
  */
