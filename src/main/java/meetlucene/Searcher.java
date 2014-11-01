@@ -16,7 +16,8 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
 /**
- * Chapter 1.4 Searcher, which searches a Lucene index
+ * Chapter 1.4.2 Listing 1.2 <br>
+ * Searcher, which searches a Lucene index
  * @author Zhang Gang
  * @date 2014年10月25日
  */

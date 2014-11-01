@@ -14,7 +14,8 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
 /**
- * Chapter 1.4 Indexer which indexs .txt files
+ * Chapter 1.4.1 Listing 1.1 <br>
+ * Indexer which indexs .txt files
  * @author Zhang Gang
  * @date 2014年10月23日
  */
@@ -30,10 +31,10 @@ public class Indexer {
 		String indexDir = "";
 		String dataDir = "";
 		/**自己加的处理，替换ant Indexer的功能 start*/
-		if (indexDir.isEmpty()){
+		if (indexDir.isEmpty()){// 1 在这里创建索引
 			indexDir = "indexes\\MeetLucene";
 		}
-		if (dataDir.isEmpty()){
+		if (dataDir.isEmpty()){// 2 从这个目录对.txt文件创建索引
 			dataDir = "src\\main\\java\\meetlucene\\data";
 		}
 		/**自己加的处理，替换ant Indexer的功能 end*/
