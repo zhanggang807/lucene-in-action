@@ -110,10 +110,9 @@ public class IndexingTest extends TestCase{
 		doc.add(new Field("city", "Den Haag", Field.Store.YES, Field.Index.ANALYZED));
 		
 		writer.updateDocument(new Term("id", "1"), doc);
-		
 		writer.close();
 		
 		assertEquals(0, getHitCount("city", "Amesterdam"));
-		assertEquals(1, getHitCount("city", "Den Haag"));
+		assertEquals(1, getHitCount("city", "Haag"));
 	}
 }
